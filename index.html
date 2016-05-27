@@ -1,15 +1,19 @@
 ﻿<!DOCTYPE html>
 <html ng-app="MyApp">
 <head>
+	
 	<meta charset="utf-8" />
 	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="app/asserts/styles/main.css" />
+	
 </head>
 <body ng-controller="AppCtrl">
-	header
+	
+	<div ng-include="'app/views/partials/header/_header.html'"></div>
 	<div ng-view>
 		
 	</div>
-	footer
+	<div ng-include="'app/views/partials/footer/_footer.html'"></div>
 	
 	<script src="bower_components/angular/angular.js"></script>
 		<!--  -->
@@ -22,6 +26,7 @@
 	<script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
 	
 	<script src="app/app.js"></script>
-	<script src="app/home/home.ctrl.js"></script>
+	<script src="app/views/home/home.ctrl.js"></script>
+	
 </body>
 </html>
