@@ -3,7 +3,8 @@
 	"use strict";	
 	var app =angular.module("MyApp",[
 			"ngRoute",
-			"pascalprecht.translate"
+			"pascalprecht.translate",
+			"ngCookies",
 			"MyCtrls"
 		])
 		.controller("AppCtrl",["$scope",function($scope){
@@ -12,7 +13,7 @@
 		.config(["$routeProvider",function($routeProvider){
 			$routeProvider
 				.when("/",{
-					templateUrl: "app/view/home/_home.html",
+					templateUrl: "app/views/home/_home.html",
 					controller: "HomeCtrl"
 				});
 		}])
@@ -23,7 +24,7 @@
 				suffix:".json"
 			})
 			
-			$translateProvider.preferredLanguage("EN");
+			$translateProvider.preferredLanguage("en");
 			$translateProvider.useLocalStorage();
 			
 		}]);

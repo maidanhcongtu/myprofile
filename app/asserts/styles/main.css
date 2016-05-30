@@ -1,3 +1,8 @@
+/*reset*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
 /* header css*/
 .header-container {
   background: #f00;
