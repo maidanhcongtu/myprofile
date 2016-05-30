@@ -1,9 +1,66 @@
-/*reset*/
+/* variable */
+/* reset */
+.clear-fix {
+  clear: both;
+}
+/* reset */
 * {
   margin: 0px;
   padding: 0px;
 }
-/* header css*/
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+/* header css */
 .header-container {
-  background: #f00;
+  background: #cf5037;
+}
+.header-container ul {
+  max-width: 1000px;
+  margin: auto;
+  min-height: 50px;
+  text-align: center;
+}
+.header-container ul li {
+  display: inline;
+  margin-right: -5px;
+}
+.header-container ul li a {
+  color: #fff;
+  display: inline-block;
+  padding: 0px 10px;
+  line-height: 50px;
+}
+.header-container ul li a:hover {
+  background: #d97460;
+}
+.header-container ul li a.selected {
+  background: #d97460;
+}
+/* person info css */
+.person-info-container {
+  height: 680px;
+  background-image: url("/app/asserts/images/backgrounds/background-info-person.PNG");
+  background-size: cover;
+}
+.person-info-container .wrap-content {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 100px;
+}
+.person-info-container .wrap-content .person-image {
+  float: left;
+}
+.person-info-container .wrap-content .person-image img {
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  border: 15px solid rgba(0,0,0,0.1);
+}
+.person-info-container .wrap-content .person-info {
+  margin-left: 480px;
 }
