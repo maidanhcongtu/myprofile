@@ -4,7 +4,7 @@
 	background-size: cover;
 	
 	& .wrap-content {
-		max-width: 1200px;
+		max-width: $contentWidth;
 		margin: auto;
 		padding-top: 100px;
 		
@@ -20,8 +20,23 @@
 
 		& .person-info {
 			margin-left: 480px;
-			$ .person-info {
-
+			margin-top: 100px;
+			
+			& .big-greeting {
+				font-size: 5em;
+				color: white;
+			}
+			
+			& .brief-about-me {
+				font-size: 2.5em;
+				color: white;
+			}
+			
+			& .link-hire-me {
+				background-color: #d25b43;
+				color: white;
+				padding: 10px 15px;
+				display: inline-block;
 			}
 		}
 	}

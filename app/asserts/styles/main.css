@@ -3,6 +3,13 @@
 .clear-fix {
   clear: both;
 }
+.col-25 {
+  float: left;
+  width: 25%;
+}
+.clearfix {
+  clear: both;
+}
 /* reset */
 * {
   margin: 0px;
@@ -63,4 +70,67 @@ li {
 }
 .person-info-container .wrap-content .person-info {
   margin-left: 480px;
+  margin-top: 100px;
+}
+.person-info-container .wrap-content .person-info .big-greeting {
+  font-size: 5em;
+  color: #fff;
+}
+.person-info-container .wrap-content .person-info .brief-about-me {
+  font-size: 2.5em;
+  color: #fff;
+}
+.person-info-container .wrap-content .person-info .link-hire-me {
+  background-color: #d25b43;
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+}
+/* about me css */
+.about-me-container {
+  background-color: #ffe9c8;
+  min-height: 400px;
+}
+.about-me-container .title {
+  text-align: center;
+}
+.about-me-container .my-skill {
+  margin: auto;
+  max-width: 1200px;
+}
+.about-me-container .follow-me {
+  margin: auto;
+  max-width: 1200px;
+}
+/* skill level */
+.skill-level-container {
+  min-height: 300px;
+  background-color: #eed9b8;
+}
+.skill-level-container .skill-section {
+  float: left;
+  width: 33.33333%;
+}
+/* resume */
+.resume-container {
+  min-height: 300px;
+  background-color: #f4debe;
+}
+.resume-container .title {
+  text-align: center;
+}
+/* project */
+.project-container {
+  min-height: 300px;
+}
+/* contact */
+.contact-container {
+  min-height: 300px;
+  background-color: #eed9b8;
+}
+/* footer */
+.footer-container {
+  background-color: #e4c38f;
+  min-height: 40px;
+  text-align: center;
 }
