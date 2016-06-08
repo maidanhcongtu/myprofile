@@ -1,3 +1,36 @@
 .clear-fix {clear: both;}
 .col-25 {float: left; width: 25%;}
 .clearfix {clear: both;}
+.row {clear: both; width: 100%;margin-bottom: 15px;height: 100%;}
+.left-50 {float: left; width: 50%;box-sizing: border-box; padding-left: 15px; padding-right: 15px;}
+.no-padding-right {padding-right: 0px !important;}
+.no-padding-left {padding-left: 0px !important;}
+
+::selection { background-color: #8e44ad; color: white; }
+
+
+textarea.control {min-height: 100px;resize: vertical;padding-top: 6px; padding-bottom: 6px;}
+.control {
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	padding: 0px 15px;
+	box-sizing: border-box;
+}
+
+.button {
+	border: 1px solid #e3e3e3;
+	border-sizing: border-box;
+	padding: 6px 12px;
+}
+
+.button-primary {
+	@extend .button;
+	background: #d25b43;
+	color: white;
+	outline-color: #d25b43;
+}
+
+

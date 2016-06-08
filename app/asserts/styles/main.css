@@ -10,6 +10,55 @@
 .clearfix {
   clear: both;
 }
+.row {
+  clear: both;
+  width: 100%;
+  margin-bottom: 15px;
+  height: 100%;
+}
+.left-50 {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.no-padding-right {
+  padding-right: 0px !important;
+}
+.no-padding-left {
+  padding-left: 0px !important;
+}
+::selection {
+  background-color: #8e44ad;
+  color: #fff;
+}
+textarea.control {
+  min-height: 100px;
+  resize: vertical;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.control {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+.button,
+.button-primary {
+  border: 1px solid #e3e3e3;
+  border-sizing: border-box;
+  padding: 6px 12px;
+}
+.button-primary {
+  background: #d25b43;
+  color: #fff;
+  outline-color: #d25b43;
+}
 /* reset */
 * {
   margin: 0px;
@@ -90,22 +139,33 @@ li {
 .about-me-container {
   background-color: #ffe9c8;
   min-height: 400px;
+  padding: 90px 0px;
 }
 .about-me-container .title {
   text-align: center;
+  margin-bottom: 30px;
+}
+.about-me-container .brief-introduction {
+  max-width: 1200px;
+  margin: 0px auto 50px;
 }
 .about-me-container .my-skill {
   margin: auto;
   max-width: 1200px;
 }
 .about-me-container .follow-me {
-  margin: auto;
+  margin: 50px auto 0px;
   max-width: 1200px;
 }
 /* skill level */
 .skill-level-container {
   min-height: 300px;
   background-color: #eed9b8;
+  padding: 90px 0px;
+}
+.skill-level-container .skill-wrapper {
+  max-width: 1200px;
+  margin: auto;
 }
 .skill-level-container .skill-section {
   float: left;
@@ -115,6 +175,7 @@ li {
 .resume-container {
   min-height: 300px;
   background-color: #f4debe;
+  padding: 90px 0px;
 }
 .resume-container .title {
   text-align: center;
@@ -122,15 +183,49 @@ li {
 /* project */
 .project-container {
   min-height: 300px;
+  padding: 90px 0px;
+}
+.project-container .title {
+  text-align: center;
 }
 /* contact */
 .contact-container {
   min-height: 300px;
   background-color: #eed9b8;
+  padding: 90px 0px;
+}
+.contact-container .title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact-container .content {
+  max-width: 1200px;
+  margin: auto;
+}
+.contact-container .contact-map {
+  text-align: center;
+  margin-top: 30px;
+}
+.contact-container .contact-form {
+  max-width: 1200px;
+  margin: auto;
+}
+.contact-container .contact-form .control-left-50 {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 50%;
+  box-sizing: border-box;
+}
+.contact-container .contact-form .address-detail {
+  margin-top: 35px;
 }
 /* footer */
 .footer-container {
   background-color: #e4c38f;
   min-height: 40px;
   text-align: center;
+}
+.footer-container .copy-right {
+  line-height: 40px;
 }
