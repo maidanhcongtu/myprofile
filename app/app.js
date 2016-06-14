@@ -8,7 +8,20 @@
 			"MyCtrls"
 		])
 		.controller("AppCtrl",["$scope",function($scope){
+
+			//create canvas for show level skill
+			$scope.loadLevelSkill = function(){
+				var c = document.getElementById("phpSkill");
+				var ctx = c.getContext("2d");
+	        	ctx.beginPath();
+				ctx.arc(95, 50, 70, 0, 1.5*Math.PI);
+				ctx.stroke();
+			}
 			
+			/*$scope.$on('$includeContentLoaded', function(event, target){
+				
+	        });*/
+
 		}])
 		.config(["$routeProvider",function($routeProvider){
 			$routeProvider
