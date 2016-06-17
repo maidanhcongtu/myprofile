@@ -11,5 +11,33 @@
 	& .skill-section {
 		float: left;
 		width: 33.33333%
+		
+		& .skill-content {
+			width: 100%;
+			max-width: 200px;
+			margin: auto;
+			position: relative;
+			text-align: center;
+			
+			& .value-percent {
+				display: inline-block;
+				line-height: 152px;
+				position: absolute;
+				margin: auto;
+				width: 100%;
+    			max-width: 152px;
+			}
+			
+			& .value-percent:after {
+				content: "%";
+				font-size: 0.8em;
+			}
+			
+			& canvas {
+				width: 152px;
+				text-align: center;
+				height: 152px;
+			}
+		}
 	}
 }
