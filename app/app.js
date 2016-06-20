@@ -9,6 +9,10 @@
 		])
 		.controller("AppCtrl",["$scope","$interval","$timeout",function($scope, $interval, $timeout){
 
+			$scope.version = new Date().getTime();
+			$scope.templateInfoPersonUrl = "app/views/partials/info-person/_info-person.html?v=" + $scope.version;
+			$scope.templateAboutMeUrl = "app/views/partials/about-me/_about-me.html?v=" + $scope.version;
+
 			//create canvas for show level skill
 			$scope.loadLevelSkill = function(){
 				
@@ -45,11 +49,11 @@
 					ctx.stroke();
 
 					var stop = $interval(function(){
-						process+=0.03;
+						process+=0.1;
 						//process = 2 -> 100%
 						//currently= process*50
 						var realPercent = Math.round(process*50*100)/100;
-						angular.element("#" + idCanvas).parent().find(".value-percent").text(realPercent);
+						angular.element("#" + idCanvas).parent().find(".value-percent").text(realPercent+"%");
 
 			        	ctx.beginPath();
 						ctx.lineWidth = 24;
@@ -63,7 +67,7 @@
 							$interval.cancel(stop);
 							stop = undefined;
 						}
-					}, 10)
+					}, 1)
 
 				}
 			}

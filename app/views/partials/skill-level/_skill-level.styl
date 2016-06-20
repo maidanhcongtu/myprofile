@@ -26,17 +26,59 @@
 				margin: auto;
 				width: 100%;
     			max-width: 152px;
+    			color: #d25b43;
 			}
 			
-			& .value-percent:after {
-				content: "%";
-				font-size: 0.8em;
+			& .value-text {
+				margin-top: 20px;
+				font-size: 1.3em;
+				color: #d25b43;
 			}
 			
 			& canvas {
 				width: 152px;
 				text-align: center;
 				height: 152px;
+			}
+		}
+		
+		& .detail-skill-section {
+			padding: 20px 50px;
+			& .detail-skill-content label {
+				float: left;
+				width: 54px;
+				text-align: right; 
+				font-size: 0.8em;
+				position: relative;
+				top: -5px;
+			}
+			
+			& .detail-skill-content {
+				padding: 10px;
+				& .progress-skill {
+					background: #d25b43;
+					height: 4px;
+					border-radius: 4px;
+					position: relative;
+				}
+				
+				& .progress-skill:before {
+					content: attr(data-skill);
+				    position: absolute;
+				    top: -14px;
+				    font-size: 0.7em;
+				    color: #d25b43;
+				}
+
+				& .progress-skill:after {
+					content: attr(data-value);
+				    position: absolute;
+				    right: 0px;
+				    top: -7px;
+				    background: #d25b43;
+				    padding: 0px 10px;
+				    border-radius: 16px;
+				}
 			}
 		}
 	}

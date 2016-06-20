@@ -7,6 +7,10 @@
   float: left;
   width: 25%;
 }
+.col-33 {
+  float: left;
+  width: 33.33333%;
+}
 .clearfix {
   clear: both;
 }
@@ -35,6 +39,8 @@
 }
 body {
   cursor: default;
+  font-size: 1em;
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
 }
 textarea.control {
   min-height: 100px;
@@ -147,6 +153,8 @@ li {
 .about-me-container .title {
   text-align: center;
   margin-bottom: 30px;
+  color: #800080;
+  font-size: 3em;
 }
 .about-me-container .brief-introduction {
   max-width: 1200px;
@@ -156,9 +164,24 @@ li {
   margin: auto;
   max-width: 1200px;
 }
+.about-me-container .my-skill .title-skill {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 20px;
+}
+.about-me-container .my-skill .content-skill {
+  box-sizing: border-box;
+  padding-right: 30px;
+}
 .about-me-container .follow-me {
   margin: 50px auto 0px;
   max-width: 1200px;
+  font-size: 1.3em;
+  color: #555;
+}
+.about-me-container .follow-me i {
+  margin-right: 5px;
+  color: #aaa;
 }
 /* skill level */
 .skill-level-container {
@@ -188,15 +211,53 @@ li {
   margin: auto;
   width: 100%;
   max-width: 152px;
+  color: #d25b43;
 }
-.skill-level-container .skill-section .skill-content .value-percent:after {
-  content: "%";
-  font-size: 0.8em;
+.skill-level-container .skill-section .skill-content .value-text {
+  margin-top: 20px;
+  font-size: 1.3em;
+  color: #d25b43;
 }
 .skill-level-container .skill-section .skill-content canvas {
   width: 152px;
   text-align: center;
   height: 152px;
+}
+.skill-level-container .skill-section .detail-skill-section {
+  padding: 20px 50px;
+}
+.skill-level-container .skill-section .detail-skill-section .detail-skill-content label {
+  float: left;
+  width: 54px;
+  text-align: right;
+  font-size: 0.8em;
+  position: relative;
+  top: -5px;
+}
+.skill-level-container .skill-section .detail-skill-section .detail-skill-content {
+  padding: 10px;
+}
+.skill-level-container .skill-section .detail-skill-section .detail-skill-content .progress-skill {
+  background: #d25b43;
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+}
+.skill-level-container .skill-section .detail-skill-section .detail-skill-content .progress-skill:before {
+  content: attr(data-skill);
+  position: absolute;
+  top: -14px;
+  font-size: 0.7em;
+  color: #d25b43;
+}
+.skill-level-container .skill-section .detail-skill-section .detail-skill-content .progress-skill:after {
+  content: attr(data-value);
+  position: absolute;
+  right: 0px;
+  top: -7px;
+  background: #d25b43;
+  padding: 0px 10px;
+  border-radius: 16px;
 }
 /* resume */
 .resume-container .resume-item .left-item,
@@ -265,6 +326,7 @@ li {
   width: 100%;
   min-height: 200px;
   padding: 20px;
+  background: #f5e2c7;
 }
 .resume-container .resume-item .content-item .title-item {
   color: #800080;
@@ -312,6 +374,8 @@ li {
 }
 .project-container .title {
   text-align: center;
+  font-size: 3em;
+  color: #800080;
 }
 /* contact */
 .contact-container {
@@ -322,6 +386,8 @@ li {
 .contact-container .title {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 3em;
+  color: #800080;
 }
 .contact-container .content {
   max-width: 1200px;
