@@ -6,6 +6,7 @@
 .left-50 {float: left; width: 50%;box-sizing: border-box; padding-left: 15px; padding-right: 15px;}
 .no-padding-right {padding-right: 0px !important;}
 .no-padding-left {padding-left: 0px !important;}
+.error{border-color: red !important; color: red !important;}
 
 ::selection { background-color: #8e44ad; color: white; }
 
@@ -28,8 +29,12 @@ textarea.control {min-height: 100px;resize: vertical;padding-top: 6px; padding-b
 
 .button {
 	border: 1px solid #e3e3e3;
-	border-sizing: border-box;
+	box-sizing: border-box;
 	padding: 6px 12px;
+}
+
+.button.disabled {
+	opacity: 0.5;
 }
 
 .button-primary {
@@ -38,5 +43,6 @@ textarea.control {min-height: 100px;resize: vertical;padding-top: 6px; padding-b
 	color: white;
 	outline-color: #d25b43;
 }
+
 
 

@@ -7,4 +7,42 @@
 		font-size: 3em;
 		color: purple;
 	}
+	
+	& .project-content {
+		max-width: $contentWidth;
+		margin: auto;
+		
+		& .project-item {
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+			padding: 50px;
+			transition: padding 0.2s;
+			
+			& img {
+				width: 100%;
+			}
+			
+			& .project-detail {
+				position: relative;
+				
+				& .des-project-item {
+					background: rgba(0,0,0,0.5);
+					min-height: 70px;
+					position: absolute;
+					width: 100%;
+					bottom: 4px;
+					color: white;
+					align-items: center;
+					justify-content: center;
+					display: flex;		
+				}
+			}
+		}
+		
+		& .project-item:hover {
+			padding: 65px;
+		}
+
+	}
 }

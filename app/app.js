@@ -7,11 +7,80 @@
 			"ngCookies",
 			"MyCtrls"
 		])
-		.controller("AppCtrl",["$scope","$interval","$timeout",function($scope, $interval, $timeout){
+		.controller("AppCtrl",["$scope","$interval","$timeout","$location","$anchorScroll","$http",function($scope, $interval, $timeout, $location, $anchorScroll, $http){
 
 			$scope.version = new Date().getTime();
+			$scope.templateHeaderUrl = "app/views/partials/header/_header.html?v=" + $scope.version;
 			$scope.templateInfoPersonUrl = "app/views/partials/info-person/_info-person.html?v=" + $scope.version;
 			$scope.templateAboutMeUrl = "app/views/partials/about-me/_about-me.html?v=" + $scope.version;
+			$scope.templateSkillLevelUrl = "app/views/partials/skill-level/_skill-level.html?v=" + $scope.version;
+			$scope.templateResumeUrl = "app/views/partials/resume/_resume.html?v=" + $scope.version;
+			$scope.templateProjectUrl = "app/views/partials/project/_project.html?v=" + $scope.version;
+			$scope.templateContactUrl = "app/views/partials/contact/_contact.html?v=" + $scope.version;
+
+			//create object contact
+		  	$scope.contact = {};
+
+		  	//flag clicked on submit
+		  	$scope.submited = false;
+		  	//first clicked
+		  	$scope.clicked = false;
+
+		  	$scope.sendContact = function(frm) {
+		  		if(frm.$valid) {
+		  			$scope.submited = true;
+		  			console.log($scope.contact);
+		  			console.log(JSON.stringify($scope.contact));
+		  			//make a http request to send email
+		  			$http.post("http://localhost/servermyprofile/index.php?XDEBUG_SESSION_START=sublime.xdebug", $.param(JSON.stringify($scope.contact))
+		  				// ,
+		  				// {headers:{"Content-type":"application/json"}}
+		  				 )
+		  				.then(function(data){
+		  					console.log(data);
+		  					$scope.clicked = false;
+		  				}, function(){
+		  					console.log("ok biet luon");
+		  					$scope.clicked = false;
+		  				})
+
+		  				//php
+		  		// 		<?php 
+						// 	header('Access-Control-Allow-Origin: *'); 
+						// 	header("Access-Control-Allow-Headers: accept, content-type");
+						// 	if(isset($_POST['name'])) {
+						// 		echo json_encode("you already post data");
+						// 	} else {
+						// 		echo json_encode("bo tay roi do nhe");
+						// 	}
+						// ?>
+		  		}
+		  	}
+
+		  	$scope.$on('$viewContentLoaded', function(){
+
+		  	});
+			$scope.$on('$includeContentLoaded', function(){
+				var locationHash = $location.hash();
+			    if(locationHash !== "" ) {
+			    	if(angular.element("#" + locationHash).length>0){
+						goToElement("#" + locationHash);
+			    	}
+				}
+		  	});
+			
+
+			$scope.goto = function(where){
+				goToElement("#"+where);				
+				$location.hash(where);
+				//$anchorScroll();
+			}
+
+			function goToElement(id) {
+				angular.element("html, body").animate({
+					scrollTop: angular.element(id).offset().top
+				},500);
+			}
 
 			//create canvas for show level skill
 			$scope.loadLevelSkill = function(){
@@ -71,10 +140,6 @@
 
 				}
 			}
-
-			/*$scope.$on('$includeContentLoaded', function(event, target){
-				
-	        });*/
 
 		}])
 		.config(["$routeProvider",function($routeProvider){

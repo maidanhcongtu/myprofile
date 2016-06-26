@@ -33,6 +33,10 @@
 .no-padding-left {
   padding-left: 0px !important;
 }
+.error {
+  border-color: #f00 !important;
+  color: #f00 !important;
+}
 ::selection {
   background-color: #8e44ad;
   color: #fff;
@@ -60,8 +64,11 @@ textarea.control {
 .button,
 .button-primary {
   border: 1px solid #e3e3e3;
-  border-sizing: border-box;
+  box-sizing: border-box;
   padding: 6px 12px;
+}
+.button.disabled {
+  opacity: 0.5;
 }
 .button-primary {
   background: #d25b43;
@@ -376,6 +383,37 @@ li {
   text-align: center;
   font-size: 3em;
   color: #800080;
+}
+.project-container .project-content {
+  max-width: 1200px;
+  margin: auto;
+}
+.project-container .project-content .project-item {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 50px;
+  transition: padding 0.2s;
+}
+.project-container .project-content .project-item img {
+  width: 100%;
+}
+.project-container .project-content .project-item .project-detail {
+  position: relative;
+}
+.project-container .project-content .project-item .project-detail .des-project-item {
+  background: rgba(0,0,0,0.5);
+  min-height: 70px;
+  position: absolute;
+  width: 100%;
+  bottom: 4px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.project-container .project-content .project-item:hover {
+  padding: 65px;
 }
 /* contact */
 .contact-container {

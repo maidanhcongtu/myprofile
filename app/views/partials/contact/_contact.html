@@ -1,7 +1,7 @@
 <div class="contact-container">
-	<h2 class="title">CONTACT</h2>
+	<h2 class="title" id="contact">CONTACT</h2>
 	<div class="content">
-		Continually promote world-class methodologies through equity invested results. Monotonectally target stand-alone ideas via cross-media collaboration and idea-sharing. Seamlessly grow innovative markets.
+		Here is where I live, You can come and find me if you want to know more about me. It's very easy, isn't it?
 	</div>
 	<div class="contact-map">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1384.9804072043014!2d106.70749153639112!3d10.939473792188396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xba1fa5e9d1e7d4bf!2zQ2jDuWEgQsOsbmggS2jDoW5o!5e0!3m2!1sen!2s!4v1465353664473" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -9,56 +9,57 @@
 	<div class="contact-form">
 		<div class="row">
 			
-			<form class="left-50 no-padding-left">
+			<form name="frmContact" ng-submit="sendContact(frmContact)" class="left-50 no-padding-left" novalidate>
 				<div class="row">
 					<div class="control-left-50 no-padding-left">
-						<input type="text" class="control" name="txtName" placeholder="Name*" id="idName" />
+						<input type="text"  ng-class="(frmContact.txtName.$touched || clicked)&& frmContact.txtName.$invalid?'error':''" required="true" ng-model="contact.name"  class="control" name="txtName" placeholder="Name*" id="idName" />
 					</div>
 
 					<div class="control-left-50 no-padding-right">
-						<input type="email" class="control" name="txtEmail" placeholder="Email*" id="idEmail" />
+						<input type="email" ng-class="(frmContact.txtEmail.$touched || clicked)&& frmContact.txtEmail.$invalid?'error':''" required="true" ng-model="contact.email" class="control" name="txtEmail" placeholder="Email*" id="idEmail" />
 					</div>
 					<div class="clearfix"></div>
 				</div>
 
 				<div class="row">
 					<div class="">
-						<input type="text" class="control" name="txtSubject" placeholder="Subject" id="idSubject" />
+						<input type="text" ng-class="(frmContact.txtSubject.$touched || clicked) && frmContact.txtSubject.$invalid?'error':''" required ng-model="contact.subject" class="control" name="txtSubject" placeholder="Subject*" id="idSubject" />
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="">
-						<textarea placeholder="Message*" id="idMessage" class="control" name="txtMessage"></textarea>
+						<textarea ng-model="contact.message" ng-class="(frmContact.txtMessage.$touched || clicked) && frmContact.txtMessage.$invalid?'error':''" required="true"  placeholder="Message*" id="idMessage" class="control" name="txtMessage"></textarea>
 					</div>
 				</div>
 
 				<div class="row">
-					<input type="submit" value="Send Message" class="button button-primary" id="btnSendMessage" />
+					<input type="submit" ng-disabled="submited" ng-class="submited?'disabled':''" ng-click="clicked=true;" value="Send Message" class="button button-primary" id="btnSendMessage"/>
 				</div>
 
 			</form>
 
 			<div class="contact-info left-50 no-padding-right">
 				<div class="address">
-				Credibly matrix cross-unit best practices with enterprise-wide niches. Intrinsicly transform worldwide quality vectors vis-a-vis resource-leveling web services. Synergistically impact just in time alignments whereas prospective alignments.
+				I'm a normal person with a small thinking and do small thing, I don't own a house, TV or homephone. Only this laptop with me. Just work for the future life.<br/>
+
 				</div>
 
 				<div class="address-detail">
 					<div class="address-item">
-						12345 North Main Street
+						Chòm sao, Thuận Giao
 					</div>
 
 					<div class="address-item">
-						New York, 2233445
+						Thuận An, Bình Dương
 					</div>
 					
 					<div class="address-item">
-						Mobile: (1800) 765 - 4321
+						Mobile: (098) 62 33 169
 					</div>
 
 					<div class="address-item">
-						Email: hello@yourdomain.com
+						Email: maidanhcongtu@gmail.com
 					</div>
 				</div>
 			</div>	

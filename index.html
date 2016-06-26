@@ -11,7 +11,7 @@
 <body ng-controller="AppCtrl">
 	
 	<!-- header -->
-	<div ng-include="'app/views/partials/header/_header.html'"></div>
+	<div ng-include="templateHeaderUrl"></div>
 	
 	<!-- pernal infor -->
 	<div ng-include="templateInfoPersonUrl"></div>
@@ -20,16 +20,16 @@
 	<div ng-include="templateAboutMeUrl"></div>
 
 	<!-- skill level -->
-	<div ng-include="'app/views/partials/skill-level/_skill-level.html'" onload="loadLevelSkill()"></div>
+	<div ng-include="templateSkillLevelUrl" onload="loadLevelSkill()"></div>
 
 	<!-- resume -->
-	<div ng-include="'app/views/partials/resume/_resume.html'"></div>
+	<div ng-include="templateResumeUrl"></div>
 
 	<!-- resume -->
-	<div ng-include="'app/views/partials/project/_project.html'"></div>
+	<div ng-include="templateProjectUrl"></div>
 
 	<!-- contact -->
-	<div ng-include="'app/views/partials/contact/_contact.html'"></div>
+	<div ng-include="templateContactUrl"></div>
 
 	<div ng-view>
 		
