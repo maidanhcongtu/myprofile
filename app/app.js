@@ -7,6 +7,11 @@
 			"ngCookies",
 			"MyCtrls"
 		])
+		// .run(["$http",function($http){
+		// 	$http.defaults.headers.post = {
+		// 		"Content-type":"application/x-www-form-urlencoded"
+		// 	}
+		// }])
 		.controller("AppCtrl",["$scope","$interval","$timeout","$location","$anchorScroll","$http",function($scope, $interval, $timeout, $location, $anchorScroll, $http){
 
 			$scope.version = new Date().getTime();
@@ -29,12 +34,10 @@
 		  	$scope.sendContact = function(frm) {
 		  		if(frm.$valid) {
 		  			$scope.submited = true;
-		  			console.log($scope.contact);
-		  			console.log(JSON.stringify($scope.contact));
 		  			//make a http request to send email
-		  			$http.post("http://localhost/servermyprofile/index.php?XDEBUG_SESSION_START=sublime.xdebug", $.param(JSON.stringify($scope.contact))
-		  				// ,
-		  				// {headers:{"Content-type":"application/json"}}
+		  			$http.post("http://localhost/servermyprofile/index.php?XDEBUG_SESSION_START=sublime.xdebug", $.param($scope.contact)
+		  				//,
+		  				 //{headers:{"Content-type":"application/x-www-form-urlencoded"}}
 		  				 )
 		  				.then(function(data){
 		  					console.log(data);
@@ -159,6 +162,11 @@
 			$translateProvider.preferredLanguage("en");
 			$translateProvider.useLocalStorage();
 			
-		}]);
+		}])
+		.config(["$httpProvider",function($httpProvider){
+			$httpProvider.defaults.headers.post = {
+				"Content-type":"application/x-www-form-urlencoded"
+			}
+		}])
 		
 })();
