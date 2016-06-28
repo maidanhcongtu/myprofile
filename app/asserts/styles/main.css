@@ -261,7 +261,7 @@ li {
   content: attr(data-value);
   position: absolute;
   right: 0px;
-  top: -7px;
+  top: -11px;
   background: #d25b43;
   padding: 0px 10px;
   border-radius: 16px;
